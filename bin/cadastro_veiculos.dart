@@ -106,20 +106,34 @@ class Veiculo {
 
   void exibirDados() {
     print('''
-    Marca: $marca
-    Modelo: $modelo
-    Placa: $placa
-    Ano: $ano
-    ''');
+Marca: $marca
+Modelo: $modelo
+Placa: $placa
+Ano: $ano
+''');
   }
 
 }
 
 void main() {
-  Veiculo carro = Veiculo(marca: 'Toyota', modelo: 'Corolla', placa: 'ABC1D23', ano: 2011);
-  carro.exibirDados();
+  Veiculo veiculo1 = Veiculo(
+    marca: 'Toyota',
+    modelo: 'Corolla',
+    placa: 'ABC1D23',
+    ano: 2011
+    );
+  
+  Veiculo veiculo2 = Veiculo(
+    marca: 'Chevrolet',
+    modelo: 'S10',
+    placa: 'EFG4H56',
+    ano: 2020
+    );
+  
+  List<Veiculo> veiculos = [veiculo1, veiculo2];
 
-  Veiculo carro2 = Veiculo(marca: 'Chevrolet', modelo: 'S10', placa: 'EFG4H56', ano: 2020);
-  carro2.exibirDados();
+  for (Veiculo veiculo in veiculos) {
+    veiculo.exibirDados();
+  }
 }
 
